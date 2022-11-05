@@ -38,6 +38,7 @@
 </head>
 <body>
   <div id="app"></div>
+  <div id="gitalk-container"></div>
   <script>
     window.$docsify = {
       name: '计算机组成原理',
@@ -200,7 +201,7 @@
         logo: 'top',				// logo:字符串或svg矢量图代码，默认为svg代码图标。
         bgColor: '#42b983'    	// 背景颜色，#fff、pink等，logo为svg图标时，不填。
       },
-      disqus: 'mango-sn-cpu'
+      //disqus: 'mango-sn-cpu'
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
@@ -236,7 +237,11 @@
   <!-- docsify-tabs (latest v1.x.x) -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
   <script src="https://cdn.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   <script>
     var _hmt = _hmt || [];
     (function() {
@@ -249,8 +254,17 @@
       var s = document.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
     })();
-    
-    </script>
+    const gitalk = new Gitalk({
+      clientID: 'b3aeac523f8096d847ea',
+      clientSecret: '990c2d2b41eaab17b21e2f4908b6a22b03f9fa79',
+      repo: 'Github repo',
+      owner: 'mg0324',
+      admin: ['Github repo collaborators, only these guys can initialize github issues'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container')
+  </script>
     
 </body>
 </html>
