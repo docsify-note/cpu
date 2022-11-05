@@ -261,7 +261,8 @@
       owner: 'mg0324',
       admin: ['mg0324'],
       // facebook-like distraction free mode
-      distractionFreeMode: false
+      distractionFreeMode: false,
+      id:decodeURI(window.location.pathname)
     });
     gitalk.render('gitalk-container')
   </script>
