@@ -38,7 +38,7 @@
 </head>
 <body>
   <div id="app"></div>
-  <div id="gitalk-container"></div>
+  <div id="giteement"></div>
   <script>
     window.$docsify = {
       name: '计算机组成原理',
@@ -239,9 +239,8 @@
   <script src="https://cdn.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script>
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
 
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
+  <script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script>
   <script>
     var _hmt = _hmt || [];
     (function() {
@@ -254,17 +253,29 @@
       var s = document.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
     })();
-    const gitalk = new Gitalk({
-      clientID: 'fac0628ed11d8ad66fe7',
-      clientSecret: '8ec49af44567b1fd665bc5ab72915a7172f1d44c',
-      repo: 'sn-cpu-gitalk',
-      owner: 'mg0324',
-      admin: ['mg0324'],
-      // facebook-like distraction free mode
-      distractionFreeMode: false,
-      id:decodeURI(window.location.pathname)
-    });
-    gitalk.render('gitalk-container')
+    // const gitalk = new Gitalk({
+    //   clientID: 'fac0628ed11d8ad66fe7',
+    //   clientSecret: '8ec49af44567b1fd665bc5ab72915a7172f1d44c',
+    //   repo: 'sn-cpu-gitalk',
+    //   owner: 'mg0324',
+    //   admin: ['mg0324'],
+    //   // facebook-like distraction free mode
+    //   distractionFreeMode: false,
+    //   id:decodeURI(window.location.pathname)
+    // });
+    // gitalk.render('gitalk-container')
+    var giteement = new Giteement({
+      id: decodeURI(window.location.pathname),
+      owner: 'mgang',
+      repo: 'sn-cpu',
+      backcall_uri: 'https://mgang.gitee.io/sn-cpu/',
+      oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+      oauth: {
+        client_id: 'c952a390e3a75d6fdd6438c94d65f04aa1813a7cc4b68fff18930bfd48f60615',
+        client_secret: '1cc967ab47f660d01eaf46f5315ef138acfb0143c89a8bc8be5bd3b6144dad90'
+      },
+    })
+    giteement.render('giteement')
   </script>
     
 </body>
