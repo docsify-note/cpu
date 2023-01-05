@@ -10,11 +10,11 @@
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/byte.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/byte.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/byte-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/byte-test.gif"/>
 
 ### 8位3态门开关
 
@@ -26,11 +26,11 @@
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8B-3T.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8B-3T.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8B-3T-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8B-3T-test.gif"/>
 
 ### 8位寄存器
 
@@ -40,11 +40,11 @@
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/register.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/register.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/register-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/register-test.gif"/>
 
 ### 38译码器
 
@@ -85,11 +85,11 @@
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/38S.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/38S.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/38S-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/38S-test.gif"/>
 
 ### 8字节存储器
 
@@ -99,15 +99,15 @@
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8Byte.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8Byte.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8Byte-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8Byte-test.gif"/>
 
 #### 优化后电路
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8Byte-yh.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8Byte-yh.png"/>
 
 输入优化位CS和WE。（片选信号和写启用信号）
 
@@ -119,13 +119,13 @@
 
 #### 位扩展电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/16Byte.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/16Byte.png"/>
 
 如上图，将2个8x1字节的存储器横向组合，使得数据宽度变成了8x2字节，则称为位扩展。
 
 #### 位扩展电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/16Byte-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/16Byte-test.gif"/>
 
 #### 字扩展电路实现
 
@@ -135,22 +135,22 @@
 
 和38译码器类似。
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/12-select.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/12-select.png"/>
 
 ##### 低位交叉编址
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/16x1-L.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/16x1-L.png"/>
 
 ##### 高位交叉编址
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/16x1-H.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/16x1-H.png"/>
 
 > [!TIP]
 > 低位交叉编址推荐使用，因为低位01交替，这样能交替选择不同片，效率高。（同一个组件连续访问需要有一定间隔）
 
 ##### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/16x1-test.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/16x1-test.png"/>
 
 有16个1字节的存储器，通过地址线切换不同的芯片存储数据。
 
@@ -167,29 +167,29 @@
 
 #### 寄存器优化后电路
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/byte-yh.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/byte-yh.png"/>
 
 #### 寄存器优化后电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8byte-yh-test.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8byte-yh-test.png"/>
 
 CS=1，输出无法同时读写。
 
 #### 8x1byte优化后电路
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8x1-byte-yh.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8x1-byte-yh.png"/>
 
 #### 8x2byte优化后电路
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8x2-byte-yh.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8x2-byte-yh.png"/>
 
 #### 16x1高位优化后电路
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/16x1-byte-H-yh.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/16x1-byte-H-yh.png"/>
 
 #### 16x1低位优化后电路
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/16x1-byte-L-yh.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/16x1-byte-L-yh.png"/>
 
 
 ### 3位计数器
@@ -199,15 +199,15 @@ CS=1，输出无法同时读写。
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/3CT.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/3CT.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/3CT-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/3CT-test.gif"/>
 
 #### 接入地址输入应用
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/3CT-yy-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/3CT-yy-test.gif"/>
 
 ## 核心组件
 ### ALU
@@ -230,15 +230,15 @@ CS=1，输出无法同时读写。
 #### 8位逻辑运算组件封装
 只贴出8位逻辑与，结构类似，比较简单。
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8B-and.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8B-and.png"/>
 
 #### ALU增强后电路
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/ALU-super.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/ALU-super.png"/>
 
 #### ALU增强后测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/ALU-super-test.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/ALU-super-test.png"/>
 
 ### 寄存器
 * [优化前版本](/skill/basic/compose-cpu?id=_8位寄存器)
@@ -259,11 +259,11 @@ CS=1，输出无法同时读写。
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/POW.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/POW.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/POW-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/POW-test.gif"/>
 
 ### 程序计数器PC
 #### 定义
@@ -271,11 +271,11 @@ CS=1，输出无法同时读写。
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/PC.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/PC.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/PC-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/PC-test.gif"/>
 
 ### 内存控制器
 #### 说明
@@ -283,15 +283,15 @@ CS=1，输出无法同时读写。
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/MC-1.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/MC-1.png"/>
 
 用来控制RAM内存的。
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/MC-2.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/MC-2.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/MC-test.jpg"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/MC-test.jpg"/>
 
 ### 总线
 可以理解为就是一条线，连接到总线上的组件需要有3态门的支持。（某一个时刻只有一个连通）
@@ -309,15 +309,15 @@ CS=1，输出无法同时读写。
 * 利用ALU实现加法。
 * 将加好的结果存到寄存器中。
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/half-ALU-ROM.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/half-ALU-ROM.png"/>
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/half-ALU.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/half-ALU.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/half-ALU-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/half-ALU-test.gif"/>
 
 
 ### 全自动加法机
@@ -326,13 +326,13 @@ CS=1，输出无法同时读写。
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/auto-ALU.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/auto-ALU.png"/>
 
 在时钟下降沿时读取ROM中的值做加法，在上升沿的时候将加法结果存到寄存器。
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/auto-ALU-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/auto-ALU-test.gif"/>
 
 ## 微程序控制
 ### 说明
@@ -341,7 +341,7 @@ CS=1，输出无法同时读写。
 ### 应用示例说明
 有如下RAM内存：
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/RAM.jpg"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/RAM.jpg"/>
 
 内存里00地址的值为3，01地址的值为4，02地址的值为9。
 计算9-(3+4)=2结果设置到第03地址上。
@@ -349,11 +349,11 @@ CS=1，输出无法同时读写。
 ### 前置处理
 让ALU加上三态门，支持连接到总线上。
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/ALU-with-bus.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/ALU-with-bus.png"/>
 
 ### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/micro-app.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/micro-app.png"/>
 
 其中微程序控制序列存在ROM中，通过位状态来控制电路运行。
 
@@ -412,7 +412,7 @@ print('生成成功')
 
 ### 微程序测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/micro-app-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/micro-app-test.gif"/>
 
 
 <script>

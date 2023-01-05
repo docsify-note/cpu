@@ -10,11 +10,11 @@
 
 CPU全称为`central processing unit`，又称中央处理器，芯片样式如下图：
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/cpu.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/cpu.png"/>
 
 其组成部分如下图：
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/cpu-compose.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/cpu-compose.png"/>
 
 可以分为运算器和控制器，还有一些缓存（目前工艺多为3级缓存）：
 
@@ -72,11 +72,11 @@ C = A&B (A与B)
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/half-adder.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/half-adder.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/ha-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/ha-test.gif"/>
 
 ### 全加器
 
@@ -117,11 +117,11 @@ C = A&B + CI&（A^B) (A与B 或上 CI与（A异或B）)
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/full-adder.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/full-adder.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/fa-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/fa-test.gif"/>
 
 ### 8位加法器
 
@@ -144,11 +144,11 @@ C = A&B + CI&（A^B) (A与B 或上 CI与（A异或B）)
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8-bit-adder.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8-bit-adder.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8-adder-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8-adder-test.gif"/>
 
 > [!TIP]
 > 注意：其中数字组件叫做探测器，显示的是16进制。
@@ -171,15 +171,15 @@ C = A&B + CI&（A^B) (A与B 或上 CI与（A异或B）)
 
 1位的取反器电路如下：
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/1fan.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/1fan.png"/>
 
 将8个1位的取反器按下图电路组合得到8位取反器：
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8fan.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8fan.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8fan-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8fan-test.gif"/>
 
 ### ALU(支持加法和减法)
 
@@ -213,13 +213,13 @@ B的补码=B取反 + 1
 
 如下ALU电路改进支持加法和进位处理:
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/ALU-AD.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/ALU-AD.png"/>
 
 其中，8BN组件是当EN位真时，8位输入取反输出到S。DE为开启减法标准位，连接到CI和EN上，表示开启加法，且在取法后给进位为1的值，巧妙地用电路表达了取法加1（补码）。
 
 #### ALU测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/alu-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/alu-test.gif"/>
 
 ### 7段数码管之1灯16进制显示
 
@@ -233,13 +233,13 @@ B的补码=B取反 + 1
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-1L.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-1L.png"/>
 
 （改电路被封装为1L的组件，方便后续扩展）
 
 通过测试可以找出各个数值对应的二进制，如下图8对应的二进制为`0111 1111`。
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-8.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-8.png"/>
 
 利用ROM来做数值显示，依次测试可知对应数值的二进制，然后转为16进制写入ROM即可。
 
@@ -265,7 +265,7 @@ B的补码=B取反 + 1
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-1L-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-1L-test.gif"/>
 
 ### 7段数码管之8位16进制显示
 
@@ -275,11 +275,11 @@ B的补码=B取反 + 1
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-8B-16.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-8B-16.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-8B-16-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-8B-16-test.gif"/>
 
 ### 7段数码管之8位10进制显示
 
@@ -289,7 +289,7 @@ B的补码=B取反 + 1
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-8B-10.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-8B-10.png"/>
 
 注意：
 
@@ -311,7 +311,7 @@ with open('test.bin', 'wb') as f:
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/ALU-8B-10-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/ALU-8B-10-test.gif"/>
 
 > [!WARNING]
 >
@@ -356,11 +356,11 @@ S  = EN&A + !EN&B (EN与A 或上 非EN与B)
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/21-select.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/21-select.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/21-select-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/21-select-test.gif"/>
 
 ### 8位21选择器
 
@@ -370,11 +370,11 @@ S  = EN&A + !EN&B (EN与A 或上 非EN与B)
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8B-21-select.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8B-21-select.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/8B-21-select-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/8B-21-select-test.gif"/>
 
 ### 7段数码管增强
 
@@ -388,11 +388,11 @@ S  = EN&A + !EN&B (EN与A 或上 非EN与B)
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-1L-EN.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-1L-EN.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-1L-EN-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-1L-EN-test.gif"/>
 
 ### 7段数码管8位10进制显示增强
 
@@ -406,7 +406,7 @@ S  = EN&A + !EN&B (EN与A 或上 非EN与B)
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-8B-10-EN.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-8B-10-EN.png"/>
 
 其中4BN为4位取反组件。
 
@@ -415,17 +415,17 @@ S  = EN&A + !EN&B (EN与A 或上 非EN与B)
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-8B-10-EN-test.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-8B-10-EN-test.png"/>
 
 #### 同理16进制显示增强
 
 电路增强如下：
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-8B-16-EN.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-8B-16-EN.png"/>
 
 测试如下：
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/7-8B-16-EN-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/7-8B-16-EN-test.gif"/>
 
 ## 时序逻辑电路
 
@@ -456,11 +456,11 @@ S  = EN&A + !EN&B (EN与A 或上 非EN与B)
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/r-s.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/r-s.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/r-s-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/r-s-test.gif"/>
 
 ### D触发器
 
@@ -481,11 +481,11 @@ D触发器能存储1位的数据，在内存中。（可以用做寄存器）
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/D.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/D.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/D-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/D-test.gif"/>
 
 当EN=1时，Q存储的是D的值。
 
@@ -506,13 +506,13 @@ D触发器能存储1位的数据，在内存中。（可以用做寄存器）
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/D-b.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/D-b.png"/>
 
 2个D触发器组合，再CP=1时存储D的值到Q中。
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/D-b-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/D-b-test.gif"/>
 
 当CP变为1时，会将D中的值设置到Q中。
 
@@ -531,23 +531,23 @@ R-S触发器增加清零Clear和预置Preset标准，连到3位的或非门上�
 
 #### R-S触发器优化
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/R-S-plus.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/R-S-plus.png"/>
 
 #### D触发器优化
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/D-plus.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/D-plus.png"/>
 
 #### D边沿触发器优化
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/D-b-plus.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/D-b-plus.png"/>
 
 #### D边沿触发器优化后测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/D-b-plus-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/D-b-plus-test.gif"/>
 
 #### D边沿触发器实现跑马灯
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/D-b-pmd.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/D-b-pmd.gif"/>
 
 ### T触发器
 
@@ -557,11 +557,11 @@ T触发器是在数字电路中，凡在CP时钟脉冲控制下，根据输入�
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/T-b.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/T-b.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/T-b-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/T-b-test.gif"/>
 
 在时钟上升沿时翻转输出值。
 
@@ -573,11 +573,11 @@ T触发器是在数字电路中，凡在CP时钟脉冲控制下，根据输入�
 
 #### 电路实现
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/T-counter.png"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/T-counter.png"/>
 
 #### 电路测试
 
-<img class="my-img" data-src="../../static/skill/basic/compose/cpu/T-counter-test.gif"/>
+<img class="my-img" data-src="static/skill/basic/compose/cpu/T-counter-test.gif"/>
 
 
 <script>
