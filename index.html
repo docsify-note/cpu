@@ -37,10 +37,7 @@
   <![endif]-->
 </head>
 <body>
-  <div id="app">
-
-  </div>
-  <div id="gitalk-container"></div>
+  <div id="app"></div>
   <script>
     
     window.$docsify = {
@@ -51,7 +48,7 @@
       loadSidebar: true,
       autoHeader: true,
       onlyCover: false,
-      // routerMode: 'history',
+      routerMode: 'hash',
       subMaxLevel: 5,
       // relativePath: true,
       // basePath: '/sn-cpu/',
@@ -80,104 +77,6 @@
         style: 'text-align: center;',
         class: 'className'
       },
-      vueComponents: {
-        'card-link': {
-          template: `
-            <a :href="href" target="_blank">
-              {{title}}
-            </a>
-          `,
-          props:["id","title"],
-          computed: {
-            href(){
-              return "https://mg.meiflower.top/cardview/index.html?id="+this.id;
-            }
-          },
-          data() {
-            return {
-              
-            }
-          }
-        },
-        'card-area': {
-          template: `
-           <div>
-            <iframe  :src="href" :style="{width:cardWidth,height:cardHeight}"></iframe>
-           </div>
-          `,
-          props:["id","height","width"],
-          computed: {
-            theId(){
-              return "card_" + this.id;
-            },
-            href(){
-              return "https://mg.meiflower.top/cardview/index.html?id="+this.id;
-            },
-            cardHeight(){
-              var result = "400px";
-              if(this.height){
-                result = this.height;
-              }
-              return result;
-            },
-            cardWidth(){
-              var result = "100%";
-              if(this.width){
-                result = this.width;
-              }
-              return result;
-            }
-          },
-          created() {
-            
-          },
-          data() {
-            return {
-              
-            }
-          }
-        },
-        'card-area-list': {
-          template: `
-           <div>
-            <iframe v-for="href in hrefs" :src="href" :style="{width:cardWidth,height:cardHeight,float:'left',marginRight:'5px'}"></iframe>
-           </div>
-          `,
-          props:["ids","height","width"],
-          computed: {
-            hrefs(){
-              var list = [];
-              var arr = this.ids.split(",");
-              for(var index in arr){
-                list.push("http://mg.meiflower.top/cardview/index.html?id="+arr[index]);
-              }
-              return list;
-            },
-            cardHeight(){
-              var result = "400px";
-              if(this.height){
-                result = this.height;
-              }
-              return result;
-            },
-            cardWidth(){
-              var result = "100%";
-              if(this.width){
-                result = this.width;
-              }
-              return result;
-            }
-          },
-          created() {
-            
-          },
-          data() {
-            return {
-              
-            }
-          }
-        }
-      },
       timeUpdater: {
         text: "<div align='right' width='100%' style='color:gray;font-size:16px;margin-top:10px;'>最后更新时间: {docsify-updated}</div>",
         formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
@@ -205,7 +104,87 @@
         logo: 'top',				// logo:字符串或svg矢量图代码，默认为svg代码图标。
         bgColor: '#42b983'    	// 背景颜色，#fff、pink等，logo为svg图标时，不填。
       },
-      //disqus: 'mango-sn-cpu'
+      // docsify-plugin-toc
+      toc: {
+        tocMaxLevel: 5,
+        target: 'h1, h2, h3, h4, h5',
+        ignoreHeaders:  ['<!-- {docsify-ignore} -->', '<!-- {docsify-ignore-all} -->']
+      },
+      // 百度统计ID
+      baiduTjId: "ee2b06c735b1c1730d944ce0aa8d677e",
+      // 开启busuanzi
+      busuanzi: true,
+      // giscus评论
+      giscus:{
+        repo: "mg0324/docsify-comments",
+        repoId: "R_kgDOI68LwA",
+        category: "Announcements",
+        categoryId: "DIC_kwDOI68LwM4CUDhM",
+        mapping: "url",
+        reactionsEnabled: "0",
+        strict: "1",
+        emitMetadata: "0",
+        inputPosition: "bottom",
+        theme: "light",
+        lang: "zh-CN",
+        loading: "lazy"
+      },
+      // docsify ads 配置广告
+      ads: [
+        {
+          img: 'https://dn-lego-static.qbox.me/cps/1638355965-480x300.jpg',
+          href: 'https://s.qiniu.com/zqiMBz'
+        },
+        {
+          img: 'https://dn-lego-static.qbox.me/cps/1638355965-480x300.jpg',
+          href: 'https://s.qiniu.com/VJFJvi'
+        },
+        {
+          img: 'https://dn-lego-static.qbox.me/cps/1638355799-480300.jpg',
+          href: 'https://s.qiniu.com/7nM3uy'
+        },
+        {
+          img: 'https://dn-lego-static.qbox.me/cps/1638268412-480x300.jpg',
+          href: 'https://s.qiniu.com/VZvaii'
+        },
+        {
+          img: 'https://dn-lego-static.qbox.me/cps/1638268217-480x300.jpg',
+          href: 'https://s.qiniu.com/nMnaQj'
+        },
+        {
+          img: 'https://dn-lego-static.qbox.me/cps/1638267917-480x300.jpg',
+          href: 'https://s.qiniu.com/aqAneu'
+        },
+        // 腾讯云 
+        {
+          img: 'https://upload-dianshi-1255598498.file.myqcloud.com/upload/nodir/345X200-9ae456f58874df499adf7c331c02cb0fed12b81d.jpg',
+          href: 'https://url.cn/00DqsRrc'
+        },
+        {
+          img: 'https://dscache.tencent-cloud.cn/upload//345-200-78bcc66c42d6998810cebb6eb4158bcce824f9b1.jpg',
+          href: 'https://url.cn/DjhfFECm'
+        },
+        {
+          img: 'https://upload-dianshi-1255598498.file.myqcloud.com/345_200-665434f41e982c3b542694850e5ea1cd9ae0b49b.png',
+          href: 'https://url.cn/ufa6Vl2B'
+        },
+        {
+          img: 'https://upload-dianshi-1255598498.file.myqcloud.com/345x200--2953d058277cb63c6b1cd127285163335cd6751e.jpg',
+          href: 'https://url.cn/JBdlnq0N'
+        },
+        {
+          img: 'https://upload-dianshi-1255598498.file.myqcloud.com/%E8%85%BE%E8%AE%AF%E4%BA%913_345%20200_1-7aeb8eb451fd6de33676444898914b1ff3298996.jpg',
+          href: 'https://url.cn/m0TwE0AC'
+        },
+        {
+          img: 'https://upload-dianshi-1255598498.file.myqcloud.com/345x200-89eeba55a2f49008e686e1a51e14bfe79f63af13.png',
+          href: 'https://url.cn/mpZn2VBe'
+        },
+        {
+          img: 'https://upload-dianshi-1255598498.file.myqcloud.com/345-200-b28f7dee9552f4241ea6a543f15a9798049701d4.jpg',
+          href: 'https://url.cn/KM23RG9M'
+        },
+      ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
@@ -220,67 +199,46 @@
   <!-- 字数插件 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
   <!-- 分页导航 -->
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- 侧边栏扩展与折叠 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- busuanzi -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-busuanzi@1.0.1/dist/docsify-busuanzi.min.js"></script>
   <!-- 页脚信息 -->
-  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
-  <!-- GitTalk评论 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+  
   <!-- 引入 layui.js -->
-  <script src="//unpkg.com/layui@2.7.6/dist/layui.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/layui@2.7.6/dist/layui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/heyui"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
   <!-- Latest -->
-  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
-  <link rel="stylesheet" href="//unpkg.com/docsify-accordion/src/style.css">
-  <script src="//unpkg.com/docsify-accordion/src/index.js"></script>
+  <!-- docsify-accordion -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-accordion/src/style.css">
+  <script src="//cdn.jsdelivr.net/npm/docsify-accordion/src/index.js"></script>
   <!-- docsify-tabs (latest v1.x.x) -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- docsify-backTop -->
   <script src="https://cdn.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script>
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
+  <!-- docsify-plantuml -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-plantuml/dist/docsify-plantuml.min.js"></script> -->
 
-  <!-- <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
-  <script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script> -->
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var host = window.location.host;
-      if(host.startsWith("localhost") || host.startsWith("127.0.0.1")){
-        return ;
-      }
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?ee2b06c735b1c1730d944ce0aa8d677e";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-    const gitalk = new Gitalk({
-      clientID: '2852335ab5ebc3502f8e',
-      clientSecret: '26bd99597744e47737051fe91653d8b66cd76cb0',
-      repo: 'sn-cpu-gitalk',
-      owner: 'mg0324',
-      admin: ['mg0324'],
-      // facebook-like distraction free mode
-      distractionFreeMode: false,
-      id:decodeURI(window.location.pathname)
-    });
-    gitalk.render('gitalk-container')
-    // var giteement = new Giteement({
-    //   id: decodeURI(window.location.pathname),
-    //   owner: 'mgang',
-    //   repo: 'sn-cpu',
-    //   backcall_uri: 'https://mgang.gitee.io/sn-cpu/',
-    //   oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
-    //   oauth: {
-    //     client_id: 'c952a390e3a75d6fdd6438c94d65f04aa1813a7cc4b68fff18930bfd48f60615',
-    //     client_secret: '1cc967ab47f660d01eaf46f5315ef138acfb0143c89a8bc8be5bd3b6144dad90'
-    //   },
-    // })
-    // giteement.render('giteement')
-  </script>
+  <!-- docsify-toc -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.css"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.js"></script> -->
 
+  <!-- docsify-plugin-toc -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.3.1/dist/light.css">
+  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
+  
+  <!-- 百度统计 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-baidu-tj@1.0.2/dist/docsify-baidu-tj.min.js"></script>
+
+  <!-- giscus评论  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-giscus@1.0.2/dist/giscus.css">
+  <script src="https://cdn.jsdelivr.net/npm/docsify-giscus@1.0.2/dist/docsify-giscus.min.js"></script>
+  <!-- docsify ads -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-ads@1.0.2/dist/docsify-ads.min.js"></script>
   </body>
 </html>
