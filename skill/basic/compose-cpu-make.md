@@ -3,7 +3,7 @@
 ## 前情分析
 一个8位CPU设计时，需要实现基础硬件、CPU框架、指令系统、微程序和编译器。
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/base.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/base.png"/>
 
 
 
@@ -56,7 +56,7 @@
 #### 532译码器电路实现
 使用ROM方式实现(32位数中只有一位为1，表示选中)
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/532-decode.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/532-decode.png"/>
 
 使用python程序生成532.bin后装载到ROM里：
 ``` python
@@ -73,19 +73,19 @@ print("生成成功")
 #### 32位异或门
 需要32位异或门，避免对寄存器同时读写。
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/32xor.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/32xor.png"/>
 
 #### RC电路实现
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/rc.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/rc.png"/>
 
 组件管脚顺序：
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/rc-com.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/rc-com.png"/>
 
 #### RC电路测试
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/rc-test.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/rc-test.png"/>
 
 W=2，表示第二个寄存器写，为01。
 R=3，表示第3个寄存器读，为10。
@@ -93,20 +93,20 @@ R=3，表示第3个寄存器读，为10。
 ### CPU控制器Control Unit
 #### 读写控制器RWC
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/rwc.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/rwc.png"/>
 
 #### CPU控制器电路
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/CPU-c.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/CPU-c.png"/>
 
 组件显示如下：
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/CPU-c-pin.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/CPU-c-pin.png"/>
 
 ### ALU升级
 支持8中操作，分别是加、减、加1、减1、与、或、异或和非。
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/ALU-l2.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/ALU-l2.png"/>
 
 * 支持程序状态字PSW
   * 第一位： 有溢出，为1
@@ -117,7 +117,7 @@ R=3，表示第3个寄存器读，为10。
 
 ## CPU实现
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/CPU.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/CPU.png"/>
 
 在硬件层面基本设计并实现好了CPU，接下来需要对CPU做软件编程，完成CPU的运行。
 
@@ -815,7 +815,7 @@ C的值从0加到5并退出，过程中调用show函数，D会伴随显示255的
 #### ALU支持中断控制
 优化后ALU电路如下：
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/ALU-INT.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/ALU-INT.png"/>
 
 电路设计时，中断位连接了非门，所以默认是允许中断的。
 
@@ -938,11 +938,11 @@ interrupt:
 ### 优化ALU
 首先需要8位里有奇数个1时输出1的组件P，电路如下：(分治法思路，异或)
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/P.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/P.png"/>
 
 优化后ALU电路如下：
 
-<img class="my-img" data-src="https://mg.meiflower.top/oss/sn-cpu/cpu-app/ALU-PSW-P.png"/>
+<img class="my-img" data-src="https://res.meiflower.top/.netlify/images?url=/sn-cpu/cpu-app/ALU-PSW-P.png"/>
 
 
 ## 总结
